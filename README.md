@@ -4,7 +4,7 @@ inspired by grok analysis
 
 to test, load the `chrome-extension` directory unpacked into `chrome://extensions/`. I recommend pinning the chrome extension for easy visibility.
 
-add your `OPENAI_API_KEY=` to a `backend/.env` file
+add your `OPENAI_API_KEY=` to the `backend/.env` file
 
 start the server with
 
