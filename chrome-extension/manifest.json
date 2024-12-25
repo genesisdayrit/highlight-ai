@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Highlight-AI",
+  "version": "1.0",
+  "description": "Highlight text to understand its meaning and context.",
+  "permissions": ["contextMenus", "scripting"],
+  "host_permissions": ["http://localhost:3000/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
+
