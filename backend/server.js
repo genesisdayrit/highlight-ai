@@ -33,17 +33,15 @@ app.post("/expand-text", async (req, res) => {
           {
             role: "system",
             content: `
-              You are a helpful assistant that expands on a given piece of highlighted text. 
-              Your goal is to provide a detailed explanation of the meaning, context, and key ideas or concepts within the text. 
-              Additionally, identify any important keywords and explain their significance.
-              Format your response as:
-              Explanation: [Expanded meaning and context]
-              Keywords: [Keyword1, Keyword2, ...] - [Brief explanation of each keyword]
+              You are a highly insightful assistant tasked with analyzing and summarizing text. 
+              Your goal is to extract the main points from the provided text and present them in a concise, three-bullet format. 
+              Each bullet should focus on an important aspect of the text and expand on key phrases, concepts, or ideas to maximize the reader's understanding. 
+              Avoid unnecessary repetition, and ensure the response is easy to read while providing useful context.
             `,
           },
           {
             role: "user",
-            content: `Expand on the following highlighted text and explain its context:\n\n"${text}"`,
+            content: `Summarize the following text into three concise bullet points, ensuring maximum clarity and depth of understanding:\n\n"${text}"`,
           },
         ],
       },
@@ -72,4 +70,3 @@ app.post("/expand-text", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`[${new Date().toISOString()}] Server running on http://localhost:${PORT}`);
 });
-
